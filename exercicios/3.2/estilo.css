@@ -1,0 +1,17 @@
+body {
+    font-size: 16px;    
+}
+h1 { 
+   height: 65px;
+   color: orange;
+   font-family: sans-serif;
+   
+}
+#amarelo {background-color: yellow;}
+#vermelho {background-color: red;}
+#marrom {background-color: brown;}
+
+.corGreen {background-color: green;}
+
+p {font-weight: 600;
+font-size:48;}
