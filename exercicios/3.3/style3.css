@@ -15,8 +15,62 @@ li:active {
   font-weight: bolder;
 }
 
-/* stylos para exercicio 3 fixar II */
+/* Para Fixar II
+1 - Estilize as divs 
+passar o cursor por cima das mesmas, elas ganhem uma borda */
 
 div:hover {
   border: solid black;
+}
+
+/* 2 - Faça cada div ter uma cor própria. */
+div:nth-of-type(1) {
+  background-color: blue;
+}
+
+div:nth-of-type(2) {
+  background-color: green;
+}
+
+div:nth-of-type(3) {
+  background-color: darkgoldenrod;
+}
+
+div:nth-of-type(4) {
+  background-color: rgb(20, 18, 18);
+}
+
+div:nth-of-type(5) {
+  background-color: rgb(127, 129, 255);
+}
+
+/* 3 - Estilize cada uma das tags h3 */
+h3:nth-of-type(1) {
+  color: rgb(131, 202, 198);
+}
+
+h3:nth-of-type(2) {
+  color: rgb(255, 0, 0);
+}
+
+h3:nth-of-type(3) {
+  font-size: 20px;
+}
+
+h3:nth-of-type(4) {
+  font-family: monospace;
+}
+
+h3:nth-of-type(5) {
+  color: black;
+}
+
+/* 4 - Faça a terceira div ser maior que as demais. */
+div:nth-of-type(3) {
+  height: 80px;
+}
+
+/* 5 - Deixe as tags ímpares h3 com o texto em itálico. */
+div:nth-child(odd) h3 {
+  font-style: italic;
 }
