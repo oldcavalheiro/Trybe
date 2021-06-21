@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  background-color: brown; /* cor do fundo */
+}
+
+div {
+  /* text properties 
+  font-family: "Courier New", monospace; /* tipo de fonte */
+  font-size: medium; /* tamanho da fonte */
+  font-weight: bolder; /* negrito */
+  text-decoration: blue underline; /* linha no texto */
+  text-align: center; /* alinhamento de texto */
+  line-height: normal; /* espaçamento entre linhas */
+  letter-spacing: normal; /* espaçamento entre letras */
+
+  /* box model (modelo de caixa do conteudo(tag)) */
+  width:auto ; /* largura conteudo */
+  height: auto ; /* altura conteudo */
+
+  border-color: black; /* color of the border */
+  border-width: 5px; /* thickness of the border */
+  border-style: solid; /* style of the border */
+  border-radius: 50%; /* radius of border (50% make circle) */
+  box-sizing: border-box; /* box model size (with/without border) */
+
+  padding: auto; /* between text and border */
+  margin:auto; /* between elements */
+
+  display:inline; /* position of content */
+  /* inline-block:
+  like inline but respect margin, padding, height... */
+  
+  /* position of image */
+  width: 200px;
+  position: absolute;
+  z-index: 4; /* ordem de prioridade da img */
+  top: 300px;
+  left: 30px;
+
+}
+
+/* selector
+. class
+# id
+: pseudo class
+  :hover  -> quando passa o mouse
+  :active -> quando clica
+:: pseudo elements (::first-letter)
+
+li a { } -> only <a>anchor inside <li>list
+.post a { } -> only <a>anchor inside class .post
+
+h1 + p -> select only paragraph that immediately preceded by <h1>
+
+ol li:nth-child(even)
+ol li:nth-child(odd){text-transform: uppercase}
+ol li:nth-child(1)
+ol li:nth-child(2)
+ol li:nth-child(3)
+
+Este seletor altera em todos os elementos exceto do 4 em diante
+#linguagens li:not(:nth-child(n + 4))
+
+#aliados li a[href*="w3schools"] { }
