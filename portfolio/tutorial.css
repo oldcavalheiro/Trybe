@@ -3,8 +3,8 @@
   background-color: brown; /* cor do fundo */
 }
 
-div {
-  /* text properties 
+div{ 
+  /* text properties */
   font-family: "Courier New", monospace; /* tipo de fonte */
   font-size: medium; /* tamanho da fonte */
   font-weight: bolder; /* negrito */
@@ -12,6 +12,19 @@ div {
   text-align: center; /* alinhamento de texto */
   line-height: normal; /* espaçamento entre linhas */
   letter-spacing: normal; /* espaçamento entre letras */
+ 
+  /* list */
+  list-style: none; /* remove marcadores de lista */
+
+  /* aba de navegação */
+  width: 45%;
+  margin-left:40px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding: 10px;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
 
   /* box model (modelo de caixa do conteudo(tag)) */
   width:auto ; /* largura conteudo */
@@ -36,6 +49,13 @@ div {
   z-index: 4; /* ordem de prioridade da img */
   top: 300px;
   left: 30px;
+
+  /* tabela */
+  border: 1px solid black;
+  padding: 5px;
+  text-align:center;
+  border-collapse: collapse;
+  width: 40%;
 
 }
 
