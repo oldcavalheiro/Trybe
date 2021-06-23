@@ -1,0 +1,64 @@
+[user]
+  email = you@youremail.com
+  name = Your Name
+[core]
+  # editor = subl -n -w
+  editor = code --wait --new-window
+  autocrlf = input
+  askpass =
+[alias]
+  st = status
+  co = checkout
+  logtree = log --pretty=format:\"%h %s\" --graph -10
+  flogtree = log --graph --oneline --decorate -20
+  undo = reset --soft HEAD~1
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  cp = cherry-pick
+  comm = commit -v
+  com = commit -v
+  fp = fetch --prune --all
+  cleann = clean -X -d -n
+  cleanf = clean -X -d -f
+  str = "!git status || : && git submodule foreach --recursive \"git status || :\"" # status recursive
+  cor = "!git checkout $1 $2 $3 $4 || : && git submodule foreach --recursive \"git checkout $1 $2 $3 $4 || :\"" # checkout recursive
+  pullr = "!git pull && git submodule foreach --recursive \"git pull\"" # fetch prune recursive
+  fpr = "!git fetch --prune --all || : && git submodule foreach --recursive \"git fetch --prune --all || :\"" # fetch prune recursive
+  rr = "!git rebase $1 || : && git submodule foreach --recursive \"git rebase $1 || :\"" # rebase recursive
+  mr = "!git merge $1 || : && git submodule foreach --recursive \"git merge $1 || :\"" # merge recursive
+  dbr = "!git branch -d $1 || : && git submodule foreach --recursive \"git branch -d $1 || :\"" # delete local branch recursive
+  pushr = "!git push && git submodule foreach --recursive \"git push\"" # push recursive
+  pushrf = "!git push -f && git submodule foreach --recursive \"git push -f\"" # push recursive force
+  dbrf = "!git branch -D $1 || : && git submodule foreach --recursive \"git branch -D $1 || :\"" # force delete local branch recursive
+  drbr = "!git push --delete $1 $2 || : && git submodule foreach --recursive \"git push --delete $1 $2 || :\"" # delete remote branch recursive
+  stashr = "!git stash || : && git submodule foreach --recursive \"git stash\""
+[diff]
+  tool = vscode
+[difftool]
+  prompt = false
+[difftool "vscode"]
+  trustExitCode = true
+  cmd = code --wait --new-window --diff $LOCAL $REMOTE
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
+[merge]
+  tool = vscode
+[mergetool "meld"]
+  keepBackup = false
+  trustExitCode = false
+  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
+[mergetool "vscode"]
+  cmd = code --wait --new-window $MERGED
+[push]
+	default = current
+[gitflow "feature.start"]
+	fetch = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[init]
+	defaultBranch = main
