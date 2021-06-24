@@ -30,3 +30,35 @@ if (soma/i > 20) {
 else {
     console.log("valor menor ou igual a 20")
 }
+
+// 5. Utilizando for , descubra qual o maior valor contido no array.
+console.log("\nexercicio 5");
+i = 0; // zerando contador
+let maiorNumero = numbers[0];
+for (let i = 0; i < numbers.length; i++) {
+    if (maiorNumero > numbers[i]) {
+        continue;
+    } else { maiorNumero = numbers[i];}
+}
+console.log(maiorNumero);
+
+/* 6. Descubra quantos valores ímpares existem no array;
+Caso não exista nenhum, imprima "nenhum valor ímpar encontrado" */
+console.log("\nexercicio 6");
+let nImpares = 0;
+for (let index = 0; index < numbers.length; index += 1){
+    if (numbers[index] % 2 === 0) {
+        continue
+    } else { nImpares += 1; }
+}
+console.log(nImpares);
+
+// 7. Utilizando for , descubra qual o menor valor contido no array.
+console.log("\nexercicio 7");
+let menorNumero = numbers[0];
+for (let i = 0; i < numbers.length; i++) {
+    if (menorNumero < numbers[i]) {
+        continue;
+    } else { menorNumero = numbers[i];}
+}
+console.log(menorNumero);
