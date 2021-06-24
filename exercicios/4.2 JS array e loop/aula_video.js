@@ -13,4 +13,4 @@ pizzas.pop("peito de peru"); // remove ultimo iten no array
 
 console.log(pizzas);
 
-console.log(pizzas.indexOf('mussarela'))
+console.log(pizzas.indexOf('mussarela')) // busca indice da mussarela
