@@ -1,0 +1,70 @@
+Cliente: navegador utilizado
+receber interação e traduz em requisição para Servidor Web
+
+servidor: super computador
+espera por requisições
+
+IP internet protocol
+identificador numérico do dispositivo
+
+ISP Internet Service Provider
+provedor de Internet
+
+DNS Domain Name System
+gerencia serviços conectados à Internet.
+
+Port Number
+número de 16 bits que identifica uma porta específica no servidor
+
+
+HTTP: Hyper-text Transfer Protocol (head e body)
+protocolo para comunicação entre navegadores e servidores na Internet.
+	HTTP por si só não consegue transmitir dados. depende do protocolo TCP/IP
+
+TCP/IP Transmission Control Protocol/Internet Protocol
+conjunto de regras para transmitir dados na rede
+
+HTTPS (S security)
+utiliza encriptação como uma forma de segurança (TLS/SSL)
+	principais metodos:
+	delete (deletar um recurso identificado pelo URL)
+	post (criar um novo recurso, como um formulário para login)
+	get (ler informações enviadas pelo servidor para uma URL específica)
+	put (atualizar o recurso identificado pelo URL)
+	
+	
+
+URL: Uniform Resource Locators (https://www.google.com/travel/flights)
+identifica o protocolo que será utilizado para comunicar com:
+	 o servidor (https)
+	 o nome do host (google.com)
+	 o recurso de acesso (travel/flights).
+
+Host
+qualquer dispositivo conectado à rede
+
+REST Representational State Transfer
+estilo de arquitetura utilizado no design de aplicações Web
+para desenvolver sistemas com mais performance e simplicidade
+	Cliente envia dados para o Servidor
+		Corpo de uma requisição HTTP
+		Cabeçalho de uma requisição HTTP
+		Parâmetros de consulta
+		URL
+		
+	Servidor envia dados para o Cliente
+		Status Code de uma resposta HTTP
+		Cabeçalho de uma resposta HTTP
+		Corpo de uma resposta HTTP
+
+etapas
+1 cliente
+2 servidor
+3 DNS
+4 Engine Renderização
+5 Requisição
+6 Resposta
+7 HTTP
+8 200 OK
+
+
