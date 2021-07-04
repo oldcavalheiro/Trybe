@@ -1,0 +1,24 @@
+// instalando "paint do linux" (existem outros vários)
+sudo snap install kolourpaint
+sudo snap remove kolourpaint
+
+// instalando o node
+sudo apt install curl // client url
+	// lembrando do comando & do bash que deixa o processo em background
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+nvm install 14 
+
+// para ver se linux esta instalado em 32 ou 64 bits
+// retorna "x86_64" para 64 bits
+uname -m 
+
+// download de conteudo externo por comando do shell
+wget "site"
+
+// atualizar a lista de pacotes e programas que podem ser instalados &&(e)
+// baixar e instalar os pacotes de atualização dos programas que estão instalados.
+sudo apt update && sudo apt upgrade
+
+react contruído pelo facebook
+RTL react testing library
+turma 14 B

@@ -1,0 +1,304 @@
+<!DOCTYPE html> <!-- indica que é html 5 -->
+
+<html>
+
+<!-- div = block element -->
+
+<head>
+  <!-- inserindo comentário -->
+  <title> titulo da aba no site </title>
+</head>
+
+<body>
+
+  <p>p - paragrafo: criando paragrafos</p>
+
+  <br>br - break: quebra a linha e vai para linha abaixo</br>
+
+  <p>
+    <b>b - bold: deixa em negrito </b> <br>
+    <strong>strong - deixa em negrito com semantica </strong><br>
+    semantica pode ser entonação de voz
+  </p>
+
+  <p>
+    <i> i - italic: sem a semantica </i><br>
+    <em> em - italico com semantica </em>
+  </p>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- -------------------------- TITULOS ----------------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  <h1>criando titulos</h1> <!-- h1 = head 1 -->
+  <h2>cabeçalhos</h2>
+  <h3>são semelhantes ao</h3>
+  <h4>documento do office . doc</h4>
+  <h3>criando subtitulos</h3>
+  <h4>do h1 ao h6</h4>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- -------------------------- LISTAS ------------------------------ -->
+  <!-- ---------------------------------------------------------------- -->
+  <!-- ul = unordered list <ul></ul> -->
+  <h2>Criando listas:</h2>
+  <ul>
+    <li>first item</li> <!-- li = line -->
+    <li>second item</li>
+    <li>third item</li>
+  </ul>
+
+  <!-- ol = ordered list <ul></ul> -->
+  <ol>
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+  </ol>
+
+  <!-- Ordered list inside unordered list -->
+  <ul>
+    <li>first item</li>
+    <li>second item
+      <!-- Look, the closing </li> tag is not placed here! -->
+      <ol>
+        <li>second item first subitem</li>
+        <li>second item second subitem</li>
+        <li>second item third subitem</li>
+      </ol>
+      <!-- Here is the closing </li> tag -->
+    </li>
+    <li>third item</li>
+  </ul>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- ------------------ ANCORAGEM E IMAGEM--------------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  <h2>Ancoragens: (links)</h2>
+  <p> documentação HTML do mozilla: (site externo) <br>
+    <!-- a = ancorage; href = hyperlink reference; target="_blank" para nova guia-->
+    <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element' target="_blank">
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element </a>
+  </p>
+
+  <p> link para arquivo html local <br>
+    <a href='detalhes a considerar.html'> detalhes a considerar </a>
+  </p>
+
+  <p> trazendo imagens através de links: (ancoragen) <br>
+    arquivo local:
+    <!-- img = imagem, src = source -->
+    <img src='pato.jpg' width='200px' alt='acessibilidade a ser vista posteriormente'>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <!-- vários espaços em branco -->
+    site externo:
+    <!-- colocando imagem de um site externo, botão direito na imagem copiar endereço -->
+    <img src='https://razoesparaacreditar.com/wp-content/uploads/2015/02/downloadCAPA.jpg' width='400px'>
+  </p>
+
+  <ul>
+    link de email que faz abrir o email
+    <li><a href="mailto:m.bluth@example.com">Email</a></li>
+    link de telefone que faz abrir telefone
+    <li><a href="tel:+123456789">Phone</a></li>
+  </ul>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- ---------------- QUEBRA DE TEMA E DE LINHA --------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  linha usada para quebrar o tema, representa a quebra de cenário (hr)
+  <hr> <!-- horizontal rule: thematic break -->
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- --------------------- CARACTERES ESPECIAIS --------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  caracteres reservados ou especiais: <br>
+  &lt &gt &amp &reg &copy &nbsp
+  <a href='https://erikasarti.com/html/acentuacao-caracteres-especiais/'> link site caracteres</a>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- -------------------- SUPER E SUB ESCRITO  ---------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  <!-- sup = superscript element , deixa o texto elevado -->
+  <!-- sub = subscript element , deixa o texto rebaixado -->
+  <p>
+    super e sub escrito: <br>
+    formula da hipotenusa:
+    hip<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup> <br>
+    quimica da agua: H<sub>2</sub>O <br>
+    <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1
+  </p>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- ----------------------------- Tabela  -------------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  <h2>Tabela:</h2>
+  <p>
+  <table>
+    <!-- table = tabela -->
+    <thead>
+      <!-- thead = tabela cabeçalho -->
+      <tr>
+        <!-- table row -->
+        <th rowspan='2'> animal </th> <!-- th = table head ; rowspan = linha -->
+        <th colspan='2'> peso medio </th> <!-- colspan = coluna -->
+        <th colspan='2'> peso maximo </th>
+        <th rowspan='2'> voador </th>
+      </tr>
+      <tr>
+        <th>Kg</th>
+        <th>Lb</th>
+        <th>Kg</th>
+        <th>Lb</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- tbody = tabela corpo -->
+      <tr>
+        <!-- tr = table reference -->
+        <td>avestruz</td> <!-- td = table data -->
+        <td>104</td>
+        <td>230</td>
+        <td>156.8</td>
+        <td>346</td>
+        <td>nao</td>
+      </tr>
+      <tr>
+        <td>cisne</td>
+        <td>11.4</td>
+        <td>25</td>
+        <td>15.5</td>
+        <td>32</td>
+        <td>sim</td>
+      </tr>
+      <tr>
+        <td>penguin</td>
+        <td>13.6</td>
+        <td>30</td>
+        <td>20</td>
+        <td>44</td>
+        <td>nao</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- -------------------------- FORMULARIO -------------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  <h2>Formulários: (form)</h2>
+
+  <form action='/tacos'>
+    <p>
+      <label for='color'>enter a color:</label> <!-- for/id assossia a label com o input -->
+      <input type="color" id="color" name='color'> <!-- name='' para aparecer na url da página -->
+    </p>
+
+    <p>
+      <label for='username'>enter a username: </label>
+      <input id="username" type="text" placeholder="username" name='username'>
+    </p>
+
+    <p>
+      <label for='password'> enter a password:</label>
+      <input type='password' placeholder="password" id='password' name='password'>
+    </p>
+
+    <p>
+      <label>
+        <!-- outra forma de assossiar label com o input -->
+        enter a number:
+        <input type='number' placeholder="enter a number" id='number' name='number' min='1' max='10' step='2'>
+      </label>
+    </p>
+
+    <!-- 3x botãozinho submit -->
+    <button>submit</button> <!-- dentro do form por padrão fica type='submit' -->
+    <button type='button'>submit</button> <!-- fora do form por padrão fica type='button' -->
+    <input type='button' value='submit'> <!-- outra form de fazer o botao -->
+    <!-- <button type="submit"> texto </button> -->
+  </form>
+
+  <h3>Pesquisa com form</h3>
+  <form action='https://www.google.com/search'>
+    <input type='text' name='q'> <!-- o 'q' vem da URL do site da google -->
+    <button>pesquisa google</button>
+  </form>
+
+  <form action='https://www.youtube.com/results'>
+    <input type='text' name='search_query'>
+    <button>pesquisa youtube</button>
+  </form>
+
+  <h3>checkbox</h3>
+  <form action='no where'>
+    <!-- checkbox várias opções podem ser marcadas  -->
+    <input type='checkbox' name='concordo' id='concordo' checked> <!-- checked a caixa já vem marcada -->
+    <label for='concordo'> concorda com termos de uso? </label> <!-- remove checked a caixa não fica marcada -->
+    <button>submit</button>
+
+    <p>
+    <h3>radiobox</h3> <!-- checkbox uma única opções podem ser marcadas  -->
+    <input type='radio' name='avaliacao' id='avaliacao' value='errado'>
+    <label for='avaliacao'> A) O quadrado é redondo.</label>
+    <input type='radio' name='avaliacao' id='avaliacao' value='correto'>
+    <label for='avaliacao'> B) O quadrado é quadrado.</label>
+    <input type='radio' name='avaliacao' id='avaliacao' value='errado'>
+    <label for='avaliacao'> C) A bola é quadrado.</label>
+    </p>
+
+    <p>
+    <h3>option</h3> <!-- exibe opções de escolha  -->
+    <label for='animal'>escolha seu animal favorito</label>
+    <select name='animal' id='animal'>
+      <!-- <option value=''> escolha sua opção </option>  -->
+      <option value='elefante'>elefante</option>
+      <option value='gato'>gato</option>
+      <option value='cachorro' selected>cachorro</option><!-- selected = pré selecionado  -->
+      <option value='tartaruga'>tartaruga</option>
+      <option value='passaro'>passáro</option>
+    </select>
+    </p>
+
+    <p>
+    <h3>range</h3>
+    <label for='volume'>altura do som:</label>
+    <input type='range' id='volume' name='volume' min='1' max='100' value='75' step='2'>
+    </p>
+    <p>
+
+    <p>
+    <h3>area de texto</h3>
+    <label for='request'>algum comentário?</label>
+    <br>
+    <textarea id='request' name='request' rows='5' cols='50' placeholder="escreva aqui"></textarea>
+    </p>
+
+    <button>submit</button>
+  </form>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- ------------------ VALIDATION / CONSTRAINTS -------------------- -->
+  <!-- ---------------------------------------------------------------- -->
+  <h3>Validações / Constraints</h3>
+  mínimo de letras 3 e máximo de letras 15
+  <form action='/nothing'>
+    <label for='username'>Username:</label>
+    <input type='text' name='username' id='username' required minlength="3" maxlength="15">
+    <button type='submit'>Submit</button>
+
+    <!-- type='email' type='url' -->
+    <!-- pattern não foi abordado -->
+  </form>
+
+
+</body>
+
+<p>
+  .<break></break>
+  .<break></break>
+  .<break></break>
+  .<break></break>
+</p>
+
+
+
+</html>
