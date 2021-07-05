@@ -13,7 +13,14 @@
     <div> div 1 </div>
     <div> div 2 </div>
 
+    <h1> Comida </h1>
   </header>
+
+  <section class="ingredients-section">
+    <h2>Ingredients</h2>
+    <ul class="ingredients-list"></ul>
+    <!-- aqui sera add os ingredientes criados -->
+  </section>
 
   <script>
     /* DOM - Document Object Model; HTML + CSS go in; JS Objects come out
@@ -57,7 +64,52 @@
     document.querySelectorAll(".piloto-f1");
     document.querySelectorAll(".piloto-f1").length;// tamanho da lista
 
+/* ************* ACESSO *****************
+parentNode    : nó pai.
+parentElement : elemento pai.
 
+childNodes : HTMLCollection com todos os nós filhos
+children   : HTMLCollection com todos os elementos filhos
+
+firstChild        : primeiro nó filho
+firstElementChild : primeiro elemento filho
+
+lastChild        : último nó filho
+lastElementChild : último elemento filho
+
+nextSibling        : próximo irmão do nó.
+nextElementSibling : próximo elemento irmão.
+
+previousSibling        : irmão do nó anterior.
+previousElementSibling : irmão do elemento anterior.
+
+********** CREATE ************
+createElement() // cria o elemento <tag>
+appendChild() // add elemento como filho
+ */
+let ingredients = ['arroz', 'feijão','cebola', 'burger'];
+
+for (let index = 0; index < ingredients.length; index += 1){
+  let ingredientList = document.createElement('li');
+  ingredientList.innerText = ingredients[index]; // add texto no elemento
+  ingredientList.className = 'ingredients-list-itens';
+  // ingredientList.classList.add = 'newClasse';
+
+  // add tag criada <li> + ingredientList innerText e className
+  document.querySelector('.ingredients-list').appendChild(ingredientList);
+}
+
+  // remove a cebola da <li> ingredientes
+let ingredientListItens = document.querySelectorAll('.ingredients-list-itens');
+for(let index = 0; index < ingredientListItens.length; index += 1){
+    let element = ingredientListItens[index];
+
+    if (element.innerText.includes('cebola')){
+      // .removeChild() syntax:
+      // nodeparent.removeChild(child)  
+      document.querySelector('.ingredients-list').removeChild(element);
+    }
+}
 
   </script>
   <!-- <script src="script.js"> script JS ficam no final do body </script> -->
