@@ -16,11 +16,19 @@
     <h1> Comida </h1>
   </header>
 
+  <!-- CREATE && REMOVE -->
   <section class="ingredients-section">
     <h2>Ingredients</h2>
     <ul class="ingredients-list"></ul>
     <!-- aqui sera add os ingredientes criados -->
   </section>
+
+  <!-- EVENTS -->
+  <p id='clicar'> paragrafo para ser clicado </p>
+
+  <div>
+    <button id='mouse-over-leave'> botão mouse passado em cima e removido</button>
+  </div>
 
   <script>
     /* DOM - Document Object Model; HTML + CSS go in; JS Objects come out
@@ -111,8 +119,46 @@ for(let index = 0; index < ingredientListItens.length; index += 1){
     }
 }
 
-  </script>
-  <!-- <script src="script.js"> script JS ficam no final do body </script> -->
+// ********** EVENTS ************
+// window.onload  // ao carregar toda a página.
+// window.innerHeight  // altura da resolução da página
+// window.innerWidth   // largura da resoluçõa da página
+
+// Exemplo 1 - Click
+let clickP = document.getElementById('clicar');
+
+// adiciona evento de click
+clickP.addEventListener('click', recebeClick);
+
+function recebeClick(eventoDeOrigem){
+  // Objeto evento
+  // duas principais propriedades:
+  // Target: O elemento que originou esse mesmo evento
+  // Type: Tipo de evento que originou o click
+      // Mouse, keyboard, screen
+  console.log(eventoDeOrigem.target);
+  console.log(eventoDeOrigem.type);
+}
+
+// Exemplo 2 - Mouse over, mouse leave
+let mouseOverLeaveButton = document.getElementById('mouse-over-leave')
+
+// adiciona o evento de mouse over
+mouseOverLeaveButton.addEventListener('mouseover', mouseEmCima);
+
+// adiciona o evento de mouse leave
+mouseOverLeaveButton.addEventListener('mouseleave', mouseSaiuDoElemento);
+
+function mouseEmCima(){
+  console.log('mouse passou por cima');
+}
+
+function mouseSaiuDoElemento(){
+  console.log('mouse saiu do elemento');
+}
+
+</script>
+<!-- <script src="script.js"> script JS ficam no final do body </script> -->
 </body>
 
 </html>
