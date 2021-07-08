@@ -1,13 +1,12 @@
 // criando dias da semana
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
-  const weekDaysList = document.querySelector('.week-days');
-
+  
   for (let index = 0; index < weekDays.length; index += 1) {
     const days = weekDays[index];
     const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
-    weekDaysList.appendChild(dayListItem);
+    document.querySelector('.week-days').appendChild(dayListItem);
   };
 };
 
@@ -45,23 +44,22 @@ function createDaysOfTheMonth() {
 };
 createDaysOfTheMonth();
 
-// 2.
+// 2. botão feriados
 function createHolidayButton(buttonName) {
   let buttonContainer = document.querySelector('.buttons-container');
   let newButton = document.createElement('button');
-  let newButtonID = 'btn-holiday';
-
+  
   newButton.innerHTML = buttonName;
-  newButton.id = newButtonID;
+  newButton.id = 'btn-holiday';
   buttonContainer.appendChild(newButton);
 };
 
 createHolidayButton('Feriados');
 
-// 3.
+// 3. muda cor dos feriados
 function displayHolidays() {
   let getHolidayButton = document.querySelector('#btn-holiday');
-  let getHolidays = document.querySelectorAll('.holiday')
+  let getHolidays = document.querySelectorAll('.day holiday')
   let backgroundColor = 'rgb(238,238,238)';
   let setNewColor = 'white';
 
@@ -119,6 +117,7 @@ function dayMouseOver() {
   days.addEventListener('mouseover', function(event) {
     event.target.style.fontSize = '30px';
     event.target.style.fontWeight = '600';
+    event.target.style.letterSpacing = '3000px';
   })
 };
 
