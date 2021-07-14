@@ -128,7 +128,7 @@
   </p>
 
   <!-- ---------------------------------------------------------------- -->
-  <!-- ----------------------------- Tabela  -------------------------- -->
+  <!-- ----------------------------- TABELA --------------------------- -->
   <!-- ---------------------------------------------------------------- -->
   <h2>Tabela:</h2>
   <p>
@@ -196,16 +196,20 @@
     <b>value</b> -> valor default dentro do input<br>
     <strong>crie vínculo</strong> input-label com input(id) e label(for)<br> 
     <b>placeholder</b>='dica do que deve ser digítado dentro da caixa input'<br>
-    <b>required</b> -> significa que campo é obrigátorio</p>
+    <b>required</b> -> significa que campo é obrigátorio<br>
+    <strong>event.prenventDefault</strong> -> (JS) impede o refresh da página </p>
     
     <ol> input types:
       <li> type:text <input type="text"> </li>
         <br>
-      <li> type='checkbox' - multiple box checked at once<br>
-        <!-- name goto url on submit; same name == bond -->
-        <input type="checkbox" id='esport1'name="esporte" value="fut" checked>futebol
-        <input type="checkbox" id='esport2'name="esporte" value="vol" >volei
-        <input type="checkbox" id='esport3'name="esporte" value="bas" >basquete
+      <li> 
+        <fieldset style="width: 20%; line-height: 10px;">
+          <legend> 'checkbox' - multiple box checked at once </legend><br>
+            <!-- name goto url on submit; same name == bond -->
+            <input type="checkbox" id='esport1'name="esporte" value="fut" checked>futebol
+            <input type="checkbox" id='esport2'name="esporte" value="vol" >volei
+            <input type="checkbox" id='esport3'name="esporte" value="bas" >basquete
+        </fieldset>
       </li>
         <br>
       <li> type='radio' - only one box checked<br>
@@ -227,11 +231,11 @@
         <input type="file" method='POST' enctype='multipart/form-data'>
       </li>   
         <br>
-      <li> color <br>
-        <input type="number" max="9" min="3" steps="1" placeholder="enter a number">
+      <li> type='number' <br>
+        <input type="number" max="9" min="3" steps="1" placeholder="number">
       </li> 
           <br>  
-      <li> color <br>
+      <li> type='color' <br>
         <input type="color">
       </li> 
         <br>  
@@ -239,7 +243,7 @@
         <select name='color' id='dropdown'>
           <option value="black"> black </option>
           <option value="white"> white </option>
-          <option value="blue"> blue </option>
+          <option value="blue" selected> blue </option>
         </select>
       </li>
       <br>  
