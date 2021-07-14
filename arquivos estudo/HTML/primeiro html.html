@@ -185,96 +185,89 @@
   <!-- -------------------------- FORMULARIO -------------------------- -->
   <!-- ---------------------------------------------------------------- -->
   <h2>Formulários: (form)</h2>
-
-  <form action='/tacos'>
-    <p>
-      <label for='color'>enter a color:</label> <!-- for/id assossia a label com o input -->
-      <input type="color" id="color" name='color'> <!-- name='' para aparecer na url da página -->
-    </p>
-
-    <p>
-      <label for='username'>enter a username: </label>
-      <input id="username" type="text" placeholder="username" name='username'>
-    </p>
-
-    <p>
-      <label for='password'> enter a password:</label>
-      <input type='password' placeholder="password" id='password' name='password'>
-    </p>
-
-    <p>
-      <label>
-        <!-- outra forma de assossiar label com o input -->
-        enter a number:
-        <input type='number' placeholder="enter a number" id='number' name='number' min='1' max='10' step='2'>
-      </label>
-    </p>
-
-    <!-- 3x botãozinho submit -->
-    <button>submit</button> <!-- dentro do form por padrão fica type='submit' -->
-    <button type='button'>submit</button> <!-- fora do form por padrão fica type='button' -->
-    <input type='button' value='submit'> <!-- outra form de fazer o botao -->
-    <!-- <button type="submit"> texto </button> -->
+ 
+  <!-- action: para onde é enviado -->
+  <!-- method: GET enviado por url -->
+  <form action="" method="GET">
+    <label for="vinculo"> label == rótulo do input </label>
+    <input type="text" placeholder="caixa do input" name="opa" id='vinculo'>
+    <button type="submit"> btn type(submit) </button>
+    <p>após escrever no input e dar o submit o name="opa" vai para a url (http:)<br>
+    <b>value</b> -> valor default dentro do input<br>
+    <strong>crie vínculo</strong> input-label com input(id) e label(for)<br> 
+    <b>placeholder</b>='dica do que deve ser digítado dentro da caixa input'<br>
+    <b>required</b> -> significa que campo é obrigátorio</p>
+    
+    <ol> input types:
+      <li> type:text <input type="text"> </li>
+        <br>
+      <li> type='checkbox' - multiple box checked at once<br>
+        <!-- name goto url on submit; same name == bond -->
+        <input type="checkbox" id='esport1'name="esporte" value="fut" checked>futebol
+        <input type="checkbox" id='esport2'name="esporte" value="vol" >volei
+        <input type="checkbox" id='esport3'name="esporte" value="bas" >basquete
+      </li>
+        <br>
+      <li> type='radio' - only one box checked<br>
+        <!-- name goto url on submit; same name == bond -->
+        <input type="radio" id='city1'name="city" value="SP" checked>SP
+        <label for='city2'>
+          <!-- input inside label get marked with click on name-->
+          <input type="radio" id='city2'name="city" value="SBC" >SBC
+        </label>
+        <input type="radio" id='city3'name="city" value="SC" >SC
+      </li>
+        <br>
+      <li> type='password' *** <br>
+        <input type="password">
+      </li> 
+        <br>
+      <li> type='arquivo' <br>
+        <!-- enctype='multipart/form-data' == receiving some out of html -->
+        <input type="file" method='POST' enctype='multipart/form-data'>
+      </li>   
+        <br>
+      <li> color <br>
+        <input type="number" max="9" min="3" steps="1" placeholder="enter a number">
+      </li> 
+          <br>  
+      <li> color <br>
+        <input type="color">
+      </li> 
+        <br>  
+      <li> dropdown / select / option <br>
+        <select name='color' id='dropdown'>
+          <option value="black"> black </option>
+          <option value="white"> white </option>
+          <option value="blue"> blue </option>
+        </select>
+      </li>
+      <br>  
+      <li> type='range' <br>
+        <input type='range' id='volume' name='volume' min='1' max='100' value='75' step='2'>
+      </li> 
+    </ol>
+    
+    <textarea name="" id="" cols="50" rows="5" placeholder="text area"></textarea>
   </form>
+  
+  <!-- 3x botãozinho submit -->
+  <button>submit</button> <!-- dentro do form por padrão fica type='submit' -->
+  <button type='button'>submit</button> <!-- fora do form por padrão fica type='button' -->
+  <input type='button' value='submit'> <!-- outra form de fazer o botao -->
+  <!-- <button type="submit"> texto </button> -->
 
-  <h3>Pesquisa com form</h3>
+  <p>Pesquisa com form:
   <form action='https://www.google.com/search'>
     <input type='text' name='q'> <!-- o 'q' vem da URL do site da google -->
     <button>pesquisa google</button>
-  </form>
+  </form></p>
 
   <form action='https://www.youtube.com/results'>
     <input type='text' name='search_query'>
     <button>pesquisa youtube</button>
   </form>
-
-  <h3>checkbox</h3>
-  <form action='no where'>
-    <!-- checkbox várias opções podem ser marcadas  -->
-    <input type='checkbox' name='concordo' id='concordo' checked> <!-- checked a caixa já vem marcada -->
-    <label for='concordo'> concorda com termos de uso? </label> <!-- remove checked a caixa não fica marcada -->
-    <button>submit</button>
-
-    <p>
-    <h3>radiobox</h3> <!-- checkbox uma única opções podem ser marcadas  -->
-    <input type='radio' name='avaliacao' id='avaliacao' value='errado'>
-    <label for='avaliacao'> A) O quadrado é redondo.</label>
-    <input type='radio' name='avaliacao' id='avaliacao' value='correto'>
-    <label for='avaliacao'> B) O quadrado é quadrado.</label>
-    <input type='radio' name='avaliacao' id='avaliacao' value='errado'>
-    <label for='avaliacao'> C) A bola é quadrado.</label>
-    </p>
-
-    <p>
-    <h3>option</h3> <!-- exibe opções de escolha  -->
-    <label for='animal'>escolha seu animal favorito</label>
-    <select name='animal' id='animal'>
-      <!-- <option value=''> escolha sua opção </option>  -->
-      <option value='elefante'>elefante</option>
-      <option value='gato'>gato</option>
-      <option value='cachorro' selected>cachorro</option><!-- selected = pré selecionado  -->
-      <option value='tartaruga'>tartaruga</option>
-      <option value='passaro'>passáro</option>
-    </select>
-    </p>
-
-    <p>
-    <h3>range</h3>
-    <label for='volume'>altura do som:</label>
-    <input type='range' id='volume' name='volume' min='1' max='100' value='75' step='2'>
-    </p>
-    <p>
-
-    <p>
-    <h3>area de texto</h3>
-    <label for='request'>algum comentário?</label>
-    <br>
-    <textarea id='request' name='request' rows='5' cols='50' placeholder="escreva aqui"></textarea>
-    </p>
-
-    <button>submit</button>
-  </form>
-
+ 
   <!-- ---------------------------------------------------------------- -->
   <!-- ------------------ VALIDATION / CONSTRAINTS -------------------- -->
   <!-- ---------------------------------------------------------------- -->
