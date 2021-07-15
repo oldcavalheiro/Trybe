@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Document</title>
+</head>
+<body>
+
+<form>
+  <fieldset>
+    <legend> Dados Pessoais: </legend>
+    <div class='forms'>
+      <label for="name">Nome: </label>
+      <input type="text" maxlength="40" id='name'>
+    </div>
+    <div class='forms'>
+      <select id='state'>
+        <option selected disabled>Estado</option>
+      </select>
+    </div>
+    <div>
+      <label for="date"> Date: </label>
+      <input type='date' id='date'>
+    </div>
+
+    <button type="submit" id='submit'> Submit </button>
+  </fieldset>
+</form>
+
+<p id='nameUser'></p>
+
+
+<script src="script.js"></script>  
+</body>
+</html>

@@ -1,0 +1,41 @@
+* {
+  background-color: #f0efeb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset,
+label {
+  width: 50%;
+  background-color: #ccc6ae;
+}
+
+legend,
+fieldset {
+  border: solid;
+  border-color: #3d340c;
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+legend {
+  background-color: #a39a73;
+}
+
+input {
+  padding: 3px;
+  padding-left: 5px;
+  border-radius: 3px;
+  border-color: #a39a73;
+}
+
+div {
+  margin: 12px;
+  background-color: #ccc6ae;
+}
+
+button {
+  margin-top: 15px;
+  border-radius: 3px;
+  padding: 3px;
+  padding-right: 5px;
+}
