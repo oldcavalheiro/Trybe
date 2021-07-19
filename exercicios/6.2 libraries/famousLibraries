@@ -1,0 +1,18 @@
+react js
+
+Bootstrap     | estilo.css | https://getbootstrap.com/
+bulma         | estilo.css | https://bulma.io/
+materialize   | estilo.css | https://materializecss.com/getting-started.html
+semantic      | estilo.css | https://semantic-ui.com/
+
+moment.js     | data e hora | https://momentjs.com/  
+DatePickerX   | data        | https://github.com/AlexKrupko/DatePickerX
+Pikaday       | data        | https://github.com/Pikaday/Pikaday
+
+Just-validate    | validação js | https://github.com/horprogs/Just-validate
+popup-validation | validação js | https://github.com/AntonLapshin/popup-validation
+
+highcharts    | gráficos interativos | https://www.highcharts.com/
+RTL           | test case (React Testing Library)
+
+
