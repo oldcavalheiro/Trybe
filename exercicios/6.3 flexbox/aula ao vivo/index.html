@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu {
+        background-color: #5995da;
+        color: white;
+        padding: 20px 0;
+
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .links {
+        display: flex;
+      }
+
+      .login {
+        margin-left: 20px;
+      }
+
+      .header {
+        display: flex;
+        background-color: #d6e9fe;
+        height: 300px;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      /* .subscribe, .title, .social {
+        border: 1px solid red;
+      } */
+
+      .blocks {
+        display: flex;
+        /* flex-wrap: wrap;
+        flex-direction: row; */
+        flex-flow: row-reverse wrap; /* Essa propriedade substitui as duas acima */
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="menu">
+      <div class="date">Fri 16, 2021</div>
+      <div class="links">
+        <div class="signup">Sign up</div>
+        <div class="login">Login</div>
+      </div>
+    </nav>
+
+    <header class="header">
+      <span class="subscribe">Subscribe &#9662</span>
+      <img class="title" src="images/awesome-logo.svg">
+      <img class="social" src="images/social-icons.svg">
+    </header>
+
+    <section class="blocks">
+      <img src="images/one.svg">
+      <img src="images/two.svg">
+      <img src="images/three.svg">
+      <img src="images/four.svg">
+      <img src="images/five.svg">
+    </section>
+  </body>
+
+</html>

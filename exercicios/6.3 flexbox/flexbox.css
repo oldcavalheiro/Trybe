@@ -1,0 +1,66 @@
+body {
+  background: rgba(0, 0, 0, 0.07);
+  font-family: "Courier New", Courier, monospace;
+}
+
+img {
+  width: 250px;
+}
+
+.header #basic {
+  width: 500px;
+}
+
+.teste {
+  display: inline;
+}
+
+.flex-container {
+  /*width: 100%;*/
+  display: flex;
+  flex-flow: row;
+  /*justify-content: center;*/
+}
+
+.propertyParent {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(rgba(156, 39, 176, 0.2), #fff);
+  border-left: solid gray thin;
+}
+
+.propertyChildren {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(rgba(255, 138, 0, 0.2), #fff);
+  border-left: solid gray thin;
+}
+
+#joaomaria {
+  background-color: rgb(0, 68, 255);
+  display: flex;
+  width: 400px;
+  height: 150px;
+
+  /* change direction of main axis */
+  flex-direction: column; /* default: row */
+
+  /* break elemens trying fit in container (<div>) */
+  flex-wrap: wrap; /* default nowrap */
+
+  /* flex-wrap + flex-direction */
+  flex-flow: row wrap;
+
+  justify-content: space-around; /* default: right */
+
+  align-items: center; /* default: stretch (esticar) */
+  align-content: flex-start;
+}
+
+@media (max-width: 950px) {
+  .flex-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+}

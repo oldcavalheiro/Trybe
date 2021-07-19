@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="flexbox.css" rel="stylesheet">
+  <title>flex</title>
+</head>
+
+<body>
+    <header>
+      <h1> Flex </h1>
+      <div class='header'>
+        <img src='imagens/00-basic-terminology.svg' id='basic'>
+        <div >
+        <img src='imagens/01-container.svg'>
+        <img src='imagens/02-items.svg'>
+        </div>
+      </div>
+    </header>
+
+  <div class='flex-container'>
+    <div class='propertyParent'>
+      <h2>Properties for the Parent (flex container)</h2>    
+      <p><strong>flex-flow</strong> == flex-direction + flex-wrap</p>
+      
+      <p><strong>flex-direction</strong> default(row)<br>
+        define o sentido do "main axis" alterando a direção dos itens</p>  
+      <img src='imagens/flex-direction.svg'>
+        
+      <p><strong>flex-wrap</strong> nowrap(default) <br>
+        (nowrap) itens em um única linha e podem exceder o limite do container <br>
+        (wrap) itens que passam do container vão para próxima linha </p>
+      <img src='imagens/flex-wrap.svg'>
+    </div>
+   
+    <div class='propertyParent'>
+    <p><strong>justify-content</strong> flex-start(default) <br>
+      define espaço que os elementos ocupam e o espaço entre eles pelo main-axis
+    </p>
+    <img src='imagens/justify-content.svg'>
+    </div>
+
+    <div class='propertyParent'>
+    <p><strong>align-items</strong> stretch(default) <br>
+      controla o alinhamento direto de todos os itens filhos pelo Cross Axis 
+    </p>
+    <img src='imagens/align-items.svg'>
+    </div>
+
+    <div class='propertyParent'>
+    <p><strong>align-content</strong> normal(default) <br>
+      property sets the distribution of space between and around content items along a flexbox's cross-axis
+    </p>
+    <img src='imagens/align-content.svg'>
+    </div>
+  
+    <div class='propertyChildren'>
+      <h2>Properties for the Children (flex items)</h2>
+      <ol>
+        <li><strong>order</strong> <br>
+          <img src='imagens/order.svg'>
+        </li>
+        <li><strong>flex-shrink</strong></li>
+        <li><strong>flex-grow</strong> <br>
+        <img src='imagens/flex-grow.svg'>
+        </li>
+        <li><strong>flex-basis</strong><br>
+          default size of an element before the remaining space is distributed</li>
+        <li><strong>flex</strong> == flex-grow, flex-shrink and flex-basis <br>
+          default is 0 1 auto
+        </li>
+        <li><strong>align-self</strong> <br>
+          <img src='imagens/align-self.svg'>
+        </li>
+      </ol>
+    </div>
+  </div>
+<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank"> flex tutorial </a>
+
+<div id='joaomaria'>
+  <p>joao</p>
+  <p>maria</p>
+  <p>rodrigo</p>
+</div>
+
+  
+</body>
+</html>
