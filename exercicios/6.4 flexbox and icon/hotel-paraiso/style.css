@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
@@ -27,7 +27,9 @@ a:hover {
   opacity: 1;
 }
 
-a:visited, a:hover, a:active {
+a:visited,
+a:hover,
+a:active {
   color: inherit;
 }
 
@@ -36,7 +38,7 @@ header img {
 }
 
 .hero {
-  background-image: url('images/hero.jpg');
+  background-image: url("images/hero.jpg");
   height: 100vh;
   background-size: cover;
   display: flex;
@@ -64,7 +66,7 @@ header img {
   color: #191c03;
   padding: 20px 50px;
   text-transform: uppercase;
-  z-index: 0;
+  z-index: 0; /* be placed behind or ahead the layer */
 }
 
 .know-the-hotel {
@@ -105,7 +107,7 @@ header img {
 .know-the-hotel .grid img {
   height: 350px;
   padding: 20px;
-  object-fit: cover;
+  object-fit: cover; /* image will be clipped to fit */
   width: 100px;
 }
 
