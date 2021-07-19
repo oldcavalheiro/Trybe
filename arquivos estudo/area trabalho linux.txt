@@ -2,6 +2,9 @@
 sudo snap install kolourpaint
 sudo snap remove kolourpaint
 
+
+SVG (Scalable Vector Graphics)
+
 // instalando o node
 sudo apt install curl // client url
 	// lembrando do comando & do bash que deixa o processo em background
