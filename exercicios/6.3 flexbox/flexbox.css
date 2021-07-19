@@ -63,4 +63,8 @@ img {
     display: flex;
     flex-flow: column;
   }
+
+  .header #basic {
+    width: auto;
+  }
 }
