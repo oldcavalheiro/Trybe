@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+  body {
+    background-color: red !important;
+  }
+}
+
+/* @media (orientation: landscape) {
+ body {
+     background-color: magenta;
+ }
+} */
+
+/* <link rel="stylesheet" href="mobile.css" media= "screen and (max-width: 768px) and (min-width: 460px)"> */
+
+/* **************** */
+/* Mobile first !!! */
+/* **************** */
+
+/* Exemplo 1: propriedades alteram 1x
+.css para mobile */
+.box {
+  /* Não precisamos inserir nenhum código aqui
+     tamanho default é 100% 
+     itens abaixo do outro */
+}
+
+/* config para telas maiores 
+   itens ficam lado a lado */
+@media (min-width: 800px) {
+  /* muda de 800px em diante 
+  config para telas maiores
+  itens lado a lado */
+  width: 33.33%;
+}
+
+/* Exemplo 2: propriedades alteram 2x
+.css para desktop */
+.box {
+  /* config para telas maiores 
+   itens ficam lado a lado */
+  width: 33.33%;
+}
+
+@media (max-width: 800px) {
+  /* muda qnd 0px até 800px
+   reconfig para telas menores
+   itens abaixo do outro */
+  width: 100%;
+}
