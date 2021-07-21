@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='pc builder.css' rel='stylesheet'>
+  <title>pc builder</title>
+</head>
+
+<body>
+<div class="flexContainer">
+  <form>
+    <fieldset>
+      <legend> Armazenamento: </legend>
+      <div class='radioLabel'>
+        <label for='HD' class='radioLabel' >  
+          <input type='radio' id='HD' name='kind-storage'> HD(Hard Disk) </label>
+         <br>
+        <label for='SSD' class='radioLabel'>  
+          <input type='radio' id='SSD' name='kind-storage'> SSD(Solid State Disk) </label>
+        <br>
+        <label for='M.2' class='radioLabel'>  
+          <input type='radio' id='M.2' name='kind-storage'> M.2(Mounted to) </label>
+        </label>
+      </div>
+        <label for='storage-manufactory'> Fabricante: </label>
+          <input type='text' id='manufactory-storage' class='input-text' placeholder="marca"> 
+          <br>
+        <label for='storage-size'> Tamanho: </label>
+          <input type='text' id='storage-size' class='input-number' placeholder="qtd gb">
+          <br>
+        <label for='storage-price'> Valor: </label>
+          <input type='text' id='storage-price' class='input-number' placeholder="R$">
+    </fieldset>
+  </form>
+
+  <form>
+    <fieldset>
+      <legend> Gabinete: </legend>
+      <div>
+        <label for='case-manufactory'> Fabricante: </label>
+          <input type='text' id='case-manufactory' class='input-text' placeholder="marca"> 
+          <br>
+        <label for='case-size'> Tamanho: </label>
+          <input type='text' id='case-size' class='input-text' placeholder="mid tower"> 
+          <br>
+        <label for='case-price'> Valor: </label>
+          <input type='text' id='case-price' class='input-number' placeholder="R$"> 
+      </div>
+    </fieldset>
+  </form>  
+
+  <form>
+    <fieldset>
+      <legend> Fonte: </legend>
+        <label for='supply-manufactory'> Fabricante: </label>
+          <input type='text' id='supply-manufactory' class='input-text' placeholder="marca"> 
+          <br>
+        <label for='supply-watts'> Potencia: </label>
+          <input type='text' id='supply-watts' class='input-text' placeholder="550w"> 
+          <br>
+        <label for='supply-price'> Valor: </label>
+          <input type='text' id='supply-price' class='input-number' placeholder="R$"> 
+      </fieldset>
+  </form>  
+
+  <form>
+    <fieldset>
+      <legend> Placa Mãe: </legend>
+        <label for='mainBoard-manufactory'> Fabricante: </label>
+          <input type='text' id='maniBoard-manufactory' class='input-text' placeholder="marca">
+          <br>
+        <label for='mainBoard-size'> Tamanho: </label>
+          <input type='text' id='mainBoard-size' class='input-text' placeholder="standard-ATX">
+          <br>
+        <label for='mainBoard-socket'> Socket: </label>
+          <input type='text' id='mainBoard-socket' class='input-text' placeholder="AM4 - 1151">
+          <br>
+        <label for='mainBoard-price'> Valor: </label>
+          <input type='text' id='mainBoard-price' class='input-number' placeholder="R$">
+     </fieldset>
+  </form>  
+
+  <form>
+    <fieldset>
+      <legend> Processador: </legend>
+        <label for='processor-manufactory'> Fabricante: </label>
+          <input type='text' id='processor-manufactory' class='input-text' placeholder="AMD - Intel">
+          <br>
+        <label for='processor-type'> Tipo: </label>
+          <input type='text' id='processor-type' class='input-text' placeholder="Ryzen - i5">
+          <br>
+        <label for='processor-socket'> socket: </label>
+          <input type='text' id='processor-socket' class='input-text' placeholder="AM4 -1151">
+          <br>
+        <label for='processor-price'> Valor: </label>
+          <input type='text' id='processor-price' class='input-number' placeholder="R$">
+      </fieldset>
+  </form>
+
+  <form>
+    <fieldset>
+      <legend> Memória: </legend>
+        <label for='memory-manufactory'> Fabricante: </label>
+          <input type='text' id='memory-manufactory' class='input-text' placeholder="marca"> 
+          <br>
+        <label for='memory-size'> Tamanho: </label>
+          <input type='text' id='memory-size' class='input-text' placeholder="8gb"> 
+          <br>
+        <label for='memory-type'> Tipo: </label>
+          <input type='text' id='memory-type' class='input-text' placeholder="DDR3 DDR4">
+          <br>
+        <label for='memory-price'> Valor: </label>
+          <input type='text' id='memory-price' class='input-number' placeholder="R$">
+      </fieldset>
+  </form>
+
+  <form>
+    <fieldset>
+      <legend> Placa Video: </legend>
+        <label for='video-manufactory'> Fabricante: </label>
+          <input type='text' id='video-manufactory' class='input-text' placeholder="marca"> 
+          <br>
+        <label for='video-size'> Tamanho: </label>
+          <input type='text' id='video-size' class='input-text' placeholder="8gb"> 
+          <br>
+        <label for='video-memory-type'> Tipo: </label>
+          <input type='text' id='video-memory-type' class='input-text' placeholder="GDDR6"> 
+          <br>
+        <label for='video-orice'> Valor: </label>
+          <input type='text' id='video-price' class='input-number' placeholder="R$"> 
+      </fieldset>
+  </form>
+</div>
+</body>
+
+</html>
