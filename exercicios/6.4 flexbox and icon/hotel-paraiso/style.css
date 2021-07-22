@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
@@ -9,9 +9,9 @@ header {
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  
   padding: 20px 50px;
-  position: fixed;
+  
   width: 100%;
   z-index: 3;
 }
@@ -27,9 +27,7 @@ a:hover {
   opacity: 1;
 }
 
-a:visited,
-a:hover,
-a:active {
+a:visited, a:hover, a:active {
   color: inherit;
 }
 
@@ -38,7 +36,7 @@ header img {
 }
 
 .hero {
-  background-image: url("images/hero.jpg");
+  background-image: url('images/hero.jpg');
   height: 100vh;
   background-size: cover;
   display: flex;
@@ -51,12 +49,10 @@ header img {
 }
 
 .hero h1 {
-  font-size: 3.2em;
   margin-bottom: 15px;
 }
 
 .hero h2 {
-  font-size: 2em;
   margin-bottom: 15px;
 }
 
@@ -66,7 +62,7 @@ header img {
   color: #191c03;
   padding: 20px 50px;
   text-transform: uppercase;
-  z-index: 0; /* be placed behind or ahead the layer */
+  z-index: 0;
 }
 
 .know-the-hotel {
@@ -107,16 +103,8 @@ header img {
 .know-the-hotel .grid img {
   height: 350px;
   padding: 20px;
-  object-fit: cover; /* image will be clipped to fit */
+  object-fit: cover;
   width: 100px;
-}
-
-.know-the-hotel .grid img.small {
-  flex-basis: 40%;
-}
-
-.know-the-hotel .grid img.large {
-  flex-basis: 60%;
 }
 
 .features {
@@ -255,4 +243,78 @@ footer ul li a.icon-color {
 footer p {
   color: #c3c63b;
   text-align: center;
+}
+
+/* Dispositivos com telas maiores que 600px */
+@media screen and (min-width: 601px) {
+  header {
+    position: fixed;
+    justify-content: space-between;
+  }
+
+  .hero h1 {
+    font-size: 3.2em;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .know-the-hotel .grid img.small {
+    flex-basis: 40%;
+  }
+
+  .know-the-hotel .grid img.large {
+    flex-basis: 60%;
+  }
+}
+
+/* Dispositivos com telas menores  */
+@media screen and (max-width: 600px) {
+  /* menu não fica fixo */
+  header {
+    position: absolute;
+    justify-content: center;
+  }
+  /* centralizar logo */
+  /* remover links */
+  nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero h2 {
+    font-size: 1em;
+  }
+
+  .know-the-hotel .grid img.small {
+    flex-basis: 100%;
+  }
+
+  .know-the-hotel .grid img.large {
+    flex-basis: 100%;
+  }
+
+  .features .grid {
+    flex-direction: column;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter form button {
+    margin-top: 20px;
+  }
+
+  .newsletter form input {
+    margin-right: 0;
+  }
+
+  footer ul li i {
+    font-size: 50px
+  }
 }
