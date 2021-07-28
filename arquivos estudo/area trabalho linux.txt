@@ -11,6 +11,11 @@ sudo apt install curl // client url
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 nvm install 14 
 
+// https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+// verificar versão do node
+sudo apt-get install -y nodejs
+node -v
+
 // para ver se linux esta instalado em 32 ou 64 bits
 // retorna "x86_64" para 64 bits
 uname -m 
