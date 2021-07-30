@@ -1,0 +1,51 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: darkslategray;
+}
+
+div {
+  /*border: black solid;*/
+  width: 250px;
+
+  display: flex;
+  flex-flow: column;
+  align-items: baseline;
+
+  line-height: 25px;
+}
+
+label {
+  display: inline-block;
+}
+
+.input-text {
+  width: 85px;
+  text-align: center;
+}
+
+.input-number {
+  width: 55px;
+  text-align: center;
+}
+
+fieldset {
+  width: 30%;
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+}
+
+legend {
+  font-weight:bold ;
+  color: black;
+}
