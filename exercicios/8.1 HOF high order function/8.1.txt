@@ -1,0 +1,18 @@
+function funcao(){ };
+function() { };
+const func = () => { };
+
+First-Class Functions quando trata suas funções como first class citizens
+ou seja, suportam mesmas operações que outros tipos. (atribuição, retorno, parâmetro)
+Exemplo: variável que recebe função
+const sum = (number1, number2) => {
+  return number1 + number2;
+};
+
+(HOF) Higher Order Functions
+são funções que recebem uma função ou mais como argumento,
+e/ou retornam outra função;
+
+elas agilizam a escrita e facilitam a reutilização de código
+Exemplo:
+button.addEventListener('click', registerUser);
