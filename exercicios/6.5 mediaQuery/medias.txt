@@ -1,0 +1,25 @@
+all go block with 768px
+
+
+kaspersky
+@media only screen and (max-width: 768px) -- all go block
+@media only screen and (min-width: 768px) and (max-width: 1063px)
+@media only screen and (min-width: 1064px) -- icons + search input gone
+
+facebook
+1133px -- search inputgone
+990px -- left bar gone (right keeps)
+810px -- all go block except icons
+630px -- all go block
+
+linkedin
+1024px -- search inputgone
+768px -- all go block
+
+league of legends
+768px -- all go block
+1024px -- icons gone
+
+hunt showdown
+1180px -- icons gone
+768px -- all go block
