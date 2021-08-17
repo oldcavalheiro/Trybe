@@ -19,8 +19,8 @@ const isOdd = (number) => {
   }
 };
 
-repeat(3, isEven); // Testa quais números serão pares;
-repeat(3, isOdd); // Testa quais números serão ímpares;
+repeat(10, isEven); // Testa quais números serão pares;
+repeat(10, isOdd); // Testa quais números serão ímpares;
 
 // Exemplo 2:
 // First-Class Functions:
@@ -37,19 +37,3 @@ console.log(calculator(sub));
 console.log(calculator(mult));
 console.log(calculator(div));
 
-
-// Exemplo 3:
-// First-Class Functions:
-const wakeUp = () => 'Acordando!!';
-const takeCoffee = () => 'Bora tomar café!!';
-const goSleep = () => 'Partiu dormir!!';
-
-// (HOF) Higher Order Function:
-const doWhat = (callback) => {
-  const result = callback();
-  console.log(result);
-};
-
-doWhat(wakeUp);
-doWhat(takeCoffee);
-doWhat(goSleep);
