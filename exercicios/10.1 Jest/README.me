@@ -1,0 +1,52 @@
+Jest é mantido pela equipe do facebook
+https://jestjs.io/docs/using-matchers
+
+https://jestjs.io/pt-BR/docs/expect#tomatchregexporstring
+
+instalar pacote Jest:
+
+// verificar versão do node
+npm -v
+
+// atualizar lista de repositórios
+sudo apt update
+
+// caso não tenha o npm instale-o
+sudo apt install npm
+
+// com o node já instalado:
+// dentro da pasta do projeto
+npm init -y
+
+// o arquivo package.json vai ser criado
+troque a linha no arquivo 
+  "test": "echo \"Error: no test specified\" && exit 1"
+para
+  "test": "jest"
+  
+// instalar o Jest
+npm install --save-dev jest
+	
+	
+// inserir um .gitignore da pasta pasta node_modules
+ela é grande a prejudica a perfomance no git
+
+// depois de criado o arquivo .js (sum.test.js)
+no terminal use o comando:
+npm test
+
+// É comum que o arquivo de teste tenha o mesmo nome que o script.js e
+fique na mesma pasta do arquivo que está sendo testado,
+acrescido da sufixo .test.js
+
+// Jest procura por arquivos com as extensões:
+.js , .jsx , .ts e .tsx 
+dentro de uma pasta com o nome __tests__ ou
+arquivos com o sufixo .test ou .spec
+
+// exporta a função sum (sum.js)
+module.exports = sum; 
+
+// importa a função sum (sum.test.js)
+const sum = require('./sum');
+
