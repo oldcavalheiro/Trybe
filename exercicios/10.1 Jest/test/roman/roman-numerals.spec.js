@@ -6,16 +6,16 @@ const convertToRoman = require('../../src/roman/roman-numerals');
 
 describe('A função convertToRoman', () => {
   test('Existe', () => {
-  // assert.strictEqual(typeof convertToRoman, 'function');
+    // assert.strictEqual(typeof convertToRoman, 'function');
 
     expect(typeof convertToRoman).toEqual('function');
   });
 
   test('Converte números inteiros de 1 a 4', () => {
-  // assert.strictEqual(convertToRoman(1), 'I');
-  // assert.strictEqual(convertToRoman(2), 'II');
-  // assert.strictEqual(convertToRoman(3), 'III');
-  // assert.strictEqual(convertToRoman(4), 'IV');
+    // assert.strictEqual(convertToRoman(1), 'I');
+    // assert.strictEqual(convertToRoman(2), 'II');
+    // assert.strictEqual(convertToRoman(3), 'III');
+    // assert.strictEqual(convertToRoman(4), 'IV');
 
     expect(convertToRoman(1)).toBe('I');
     expect(convertToRoman(2)).toBe('II');
@@ -24,12 +24,12 @@ describe('A função convertToRoman', () => {
   });
 
   test('Converte números inteiros de 5 a 9', () => {
-  // assert.strictEqual(convertToRoman(5), 'V');
-  // assert.strictEqual(convertToRoman(6), 'VI');
-  // assert.strictEqual(convertToRoman(7), 'VII');
-  // assert.strictEqual(convertToRoman(8), 'VIII');
-  // assert.strictEqual(convertToRoman(9), 'IX');
-  
+    // assert.strictEqual(convertToRoman(5), 'V');
+    // assert.strictEqual(convertToRoman(6), 'VI');
+    // assert.strictEqual(convertToRoman(7), 'VII');
+    // assert.strictEqual(convertToRoman(8), 'VIII');
+    // assert.strictEqual(convertToRoman(9), 'IX');
+
     expect(convertToRoman(5)).toBe('V');
     expect(convertToRoman(6)).toBe('VI');
     expect(convertToRoman(7)).toBe('VII');
