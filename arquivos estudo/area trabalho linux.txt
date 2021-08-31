@@ -1,7 +1,3 @@
-// instalando "paint do linux" (existem outros vários)
-sudo snap install kolourpaint
-sudo snap remove kolourpaint
-
 
 SVG (Scalable Vector Graphics)
 
