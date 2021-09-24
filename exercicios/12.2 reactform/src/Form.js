@@ -78,7 +78,7 @@ class Form extends Component {
           <input
             name='vaiComparecer'
             type='checkbox'
-            value={ this.state.email }
+            checked={ this.state.email }
             onChange={ this.handleChange }
           />
         </label>

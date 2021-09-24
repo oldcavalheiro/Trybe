@@ -1,0 +1,26 @@
+props.children
+BrowserRouter
+Link
+Route
+Switch
+Redirect
+
+npm install react-router-dom
+
+
+// BrowserRouter
+componente que encapsula a sua aplicação, que possibilita fazer uso de navegação.
+
+// Route 
+componente fundamental em React Router
+estabelece mapeamento entre o caminho de URL declarado com o componente. (correspondência entre o caminho da URL e do componente.
+
+// Switch
+usado para encapsular um conjunto de rotas definido na Route
+
+// Redirect
+componente permite levar para diferentes locais.
+  exemplo: autenticação
+    pessoa acessa informações sensíveis se estiver autenticada
+    caso contrário, é redirecionada para página de login.
+    
