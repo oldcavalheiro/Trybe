@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  width: 60vw;
+  margin-top: 100px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}

@@ -1,0 +1,117 @@
+check list react-redux:
+
+npm install redux
+npm install react-redux
+
+// 1.criar store
+src/store/index.js
+  import { createStore } from 'redux';
+  const store = createStore(*);
+  // *recebe reducer criado no item 4 ver item 5
+  export default store;
+
+// 2.colocar componentes dentro do Provider para componentes terem acesso ao store 
+src/App.js
+  import { Provider } from 'react-redux';
+  import store from './store'
+  return (
+    <Provider store={store}>
+      // conteudo componentes
+    </Provider>  
+  )
+  
+// 3.criar actions (pode haver vários "objetos" e por isso não usa default export)
+src/actions/movieAction.js
+  export function selectMovie(category, movie) = {
+    type: 'SELECT_MOVIE,
+    categoria: category,
+    movie: movie,
+  }
+  
+// 4.criar reducers (boa prática um reducer por arquivo)
+  src/reducers/movieReducer.js
+    import categories from '../data'; // could be API
+    const INITIAL_STATE = {
+      selectedCategory: {}, // 7.2 'Teste 1'
+      selectedMovie: {},    // 7.2 'Teste 2' 
+      categories: categories,
+    }
+    
+    function movierReducer(state=INITIAL_STATE, action){
+      if(action.type === 'SELECT_MOVIE'){
+        return {
+          // redux não altera state
+          // redux imutavel, jogar fora e criar novo é mais rápido
+          // state.selectedCategory = action.category; // erro:não altera estado
+          // state.selectedMovie = action.movie; // erro:não altera estado
+          // fazer desta forma:
+          ...state, // abre o objeto state
+          selectedCategory: action.category, // copia state no selectedCategory 
+          selectedMovie: action.movie, // copia state no selectedMovie
+        }
+      }
+      return state;
+    }
+  export default movieReducer
+  
+// 5.passar o reducer para a store
+  src/store/index.js
+  import { createStore } from 'redux';
+  import movieReducer from '..reducers/movieReducer';
+  const store = createStore(
+    movieReducer,
+    composeWithDevTools(), // plugin Redux DevTools do chrome
+  );
+  export default store;
+  
+// 6.verificar o INITIAL_STATE no plugin Redux DevTools
+
+// 7. componente Sidebar vai conectar ao redux
+  src/components/Sidebar.js
+  7.1 import { connect } from 'react-redux';
+  
+  7.2 function mapStateToProps(state){
+        return {
+        categoriesInStateGlobal: state.categories,
+        test1: state.selectedCategory, // 4.recebe variavel INITIAL_STATE do reducer
+        test2: state.selectedMovie,    // 4.recebe variavel INITIAL_STATE do reducer
+        // vai para componente Sidebar via props
+        // const { categoriesInStateGlobal } = this.props;
+        }
+      }
+  7.3 export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+
+// 8. render() do componente Sidebar.js vai receber o state do reducer
+  render() {
+    const { categoriesInStateGlobal, test1, test2 } = this.props
+    console.log(test1, test2); // Teste 1, Teste 2
+    
+// 9. Criando as ações com redux (dispatch) no componente Sidebar
+  9.1 import * as movieActions from '../actions/movieActions';
+  9.2 function mapDispatchToProps(dispatch){
+        return{
+          dispararAcaoSelecionarFilme: (category, movie) => dispatch(movieActions.selectMovie(category, movie))
+        }
+      }
+  
+  // 9.3 trazer a função que dispara a action para o componente Sidebar
+  render() {
+    const { categoriesInStateGlobal, dispararAcaoSelecionarFilme } = this.props
+    
+  // 9.4 a ação vai dispar quando clicar no botão:
+  <button type='button' onClick={() => dispararAcaoSelecionarFilme(category, movie)}>
+    // o plugin Redux DevTools do chrome já deve estar mudando o filme (na tab diff)
+    // category vem do categories.map(category da linha 13 do Sidebar
+    // movies   vem do     movies.map(movie    da linha 18 do Sidebar
+    
+  // 10 passar category e movie para componente Player
+  // 11 para mais de 1 reducer usar { combineReducers } de reducers/index.js
+        e fazer um rootReducer em store
+  
+  
+
+
+
+
+
+  
